@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Python 3</title>
+<title>Pandas_3</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13083,7 +13083,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13096,7 +13096,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#read the data csv</span>
@@ -13110,7 +13110,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#read the data csv</span>
@@ -13260,7 +13260,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">movies</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ratings</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;movieId&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
@@ -13273,7 +13273,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_comedy</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s1">&#39;genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;Comedy&#39;</span><span class="p">)</span>
@@ -13286,7 +13286,22 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">m</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">m</span><span class="p">[</span><span class="s1">&#39;userId&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">m</span><span class="p">[</span><span class="s1">&#39;movieId&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span><span class="p">[</span><span class="n">is_comedy</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -13302,7 +13317,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13325,104 +13340,71 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>movieId</th>
       <th>title</th>
       <th>genres</th>
-      <th>userId</th>
       <th>rating</th>
-      <th>timestamp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>17317809</th>
-      <td>6296</td>
-      <td>Mighty Wind, A (2003)</td>
-      <td>Comedy|Musical</td>
-      <td>55364</td>
-      <td>4.0</td>
-      <td>1065500895</td>
-    </tr>
-    <tr>
-      <th>15457888</th>
-      <td>4478</td>
-      <td>Biloxi Blues (1988)</td>
-      <td>Comedy|Drama</td>
-      <td>112037</td>
-      <td>2.5</td>
-      <td>1112414115</td>
-    </tr>
-    <tr>
-      <th>5318307</th>
-      <td>947</td>
-      <td>My Man Godfrey (1936)</td>
-      <td>Comedy|Romance</td>
-      <td>99226</td>
-      <td>5.0</td>
-      <td>995664987</td>
-    </tr>
-    <tr>
-      <th>17221992</th>
-      <td>6156</td>
-      <td>Shanghai Knights (2003)</td>
-      <td>Action|Adventure|Comedy</td>
-      <td>63910</td>
-      <td>3.5</td>
-      <td>1432602077</td>
-    </tr>
-    <tr>
-      <th>11080560</th>
-      <td>2431</td>
-      <td>Patch Adams (1998)</td>
-      <td>Comedy|Drama</td>
-      <td>41539</td>
-      <td>3.5</td>
-      <td>1484926694</td>
-    </tr>
-    <tr>
-      <th>23709032</th>
-      <td>109953</td>
-      <td>Cat Concerto, The (1947)</td>
-      <td>Animation|Children|Comedy</td>
-      <td>20744</td>
-      <td>4.0</td>
-      <td>1554747133</td>
-    </tr>
-    <tr>
-      <th>8622397</th>
-      <td>1639</td>
-      <td>Chasing Amy (1997)</td>
+      <th>10424125</th>
+      <td>Working Girl (1988)</td>
       <td>Comedy|Drama|Romance</td>
-      <td>68396</td>
-      <td>3.0</td>
-      <td>952369923</td>
+      <td>4.5</td>
     </tr>
     <tr>
-      <th>13519032</th>
-      <td>3397</td>
-      <td>Great Muppet Caper, The (1981)</td>
-      <td>Children|Comedy</td>
-      <td>28522</td>
-      <td>3.5</td>
-      <td>1473073677</td>
-    </tr>
-    <tr>
-      <th>1950756</th>
-      <td>296</td>
-      <td>Pulp Fiction (1994)</td>
-      <td>Comedy|Crime|Drama|Thriller</td>
-      <td>28455</td>
+      <th>7874366</th>
+      <td>Grease (1978)</td>
+      <td>Comedy|Musical|Romance</td>
       <td>5.0</td>
-      <td>1298897784</td>
     </tr>
     <tr>
-      <th>24605254</th>
-      <td>162396</td>
-      <td>Skiptrace (2016)</td>
-      <td>Action|Comedy</td>
-      <td>156537</td>
+      <th>17415239</th>
+      <td>Bruce Almighty (2003)</td>
+      <td>Comedy|Drama|Fantasy|Romance</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>19159027</th>
+      <td>Eddie Murphy Delirious (1983)</td>
+      <td>Comedy|Documentary</td>
       <td>4.0</td>
-      <td>1490997789</td>
+    </tr>
+    <tr>
+      <th>2376746</th>
+      <td>Adventures of Priscilla, Queen of the Desert, ...</td>
+      <td>Comedy|Drama</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>8233377</th>
+      <td>Austin Powers: International Man of Mystery (1...</td>
+      <td>Action|Adventure|Comedy</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>7365473</th>
+      <td>Young Frankenstein (1974)</td>
+      <td>Comedy|Fantasy</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>22245929</th>
+      <td>Toy Story 3 (2010)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy|IMAX</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <th>16011324</th>
+      <td>Amelie (Fabuleux destin d'Amélie Poulain, Le) ...</td>
+      <td>Comedy|Romance</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>13487578</th>
+      <td>American Graffiti (1973)</td>
+      <td>Comedy|Drama</td>
+      <td>5.0</td>
     </tr>
   </tbody>
 </table>
@@ -14001,19 +13983,6 @@ div#notebook {
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
